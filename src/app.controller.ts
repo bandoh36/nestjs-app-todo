@@ -1,12 +1,17 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+// import { AppService } from './app.service';
+import { DynamoDBService } from './app.service';
 
-@Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: DynamoDBService) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
-  }
+  // @Get()
+  // getHello(): string {
+  //   return this.appService.getHello();
+  // }
+
+  // @Get('goodBye')
+  // getGoodBye(): string {
+  //   return this.appService.getGoodBye();
+  // }
 }
